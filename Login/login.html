@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="form-box" id="form-box">
+      <!-- Login Form -->
+      <form id="loginForm" class="form" onsubmit="return loginValidate()" autocomplete="off">
+        <h2>Login</h2>
+        <input type="text" id="loginEmail" placeholder="Email" />
+        <input type="password" id="loginPassword" placeholder="Password" />
+        <button type="submit">Login</button>
+        <p class="form-switch">Don't have an account? <span onclick="switchForm('signup')">Sign up</span></p>
+        <p class="error-message" id="loginError"></p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="form hidden" onsubmit="return signupValidate()" autocomplete="off">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupEmail" placeholder="Email" />
+        <input type="password" id="signupPassword" placeholder="Password" />
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+        <button type="submit">Sign Up</button>
+        <p class="form-switch">Already have an account? <span onclick="switchForm('login')">Login</span></p>
+        <p class="error-message" id="signupError"></p>
+      </form>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

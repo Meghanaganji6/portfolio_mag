@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning BOM and DOM</title>
+  <link rel="stylesheet" href="bom.css" />
+</head>
+<body>
+  <header>
+    <h1>Learning BOM and DOM</h1>
+    <p>The Browser Object Model (BOM) and the Document Object Model (DOM) are essential for interactive web development.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>The Browser Object Model (BOM) and the Document Object Model (DOM) are two important concepts in web development that allow interaction with the browser and the webpage's content.</p>
+      <p>The BOM provides objects and methods to interact with the browser window, such as managing dialogs, screen information, browser history, and URL. The DOM, on the other hand, is a structured representation of the HTML or XML document that allows script languages like JavaScript to manipulate the content, structure, and style of a webpage.</p>
+      <p>Understanding both BOM and DOM is essential for effective client-side web development.</p>
+    </section>
+
+    <section>
+      <h2>Key Points</h2>
+      <h3>Browser Object Model (BOM)</h3>
+      <ul>
+        <li>Allows interaction with the browser window and its components.</li>
+        <li>Includes objects such as <code>window</code>, <code>navigator</code>, <code>screen</code>, <code>history</code>, and <code>location</code>.</li>
+        <li>Not standardized by W3C, can vary slightly between browsers.</li>
+        <li>Used for controlling browser features like opening new windows or tabs, accessing browser info, and handling URL redirection.</li>
+      </ul>
+
+      <h3>Document Object Model (DOM)</h3>
+      <ul>
+        <li>Standardized interface for accessing and manipulating HTML and XML documents.</li>
+        <li>Represents the document as a tree of nodes.</li>
+        <li>Allows dynamic changes of content, style, and structure via JavaScript.</li>
+        <li>Is consistent across modern browsers due to W3C standardization.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Differences Between BOM and DOM</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>BOM</th>
+            <th>DOM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Definition</td>
+            <td>Objects provided by browsers to interact with the browser environment/window.</td>
+            <td>Standardized representation of the HTML/XML document structure.</td>
+          </tr>
+          <tr>
+            <td>Purpose</td>
+            <td>Manage browser features like windows, history, URLs, and user agent info.</td>
+            <td>Manipulate content, structure, and style of the document.</td>
+          </tr>
+          <tr>
+            <td>Standardization</td>
+            <td>Not fully standardized; can differ between browsers.</td>
+            <td>Standardized by W3C and consistent across browsers.</td>
+          </tr>
+          <tr>
+            <td>Main Objects</td>
+            <td><code>window</code>, <code>navigator</code>, <code>screen</code>, <code>history</code>, <code>location</code></td>
+            <td><code>document</code> and its nodes (elements, text, attributes)</td>
+          </tr>
+          <tr>
+            <td>Manipulates</td>
+            <td>The browser window and environment.</td>
+            <td>The webpage content and structure.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Examples</h2>
+      <h3>BOM Example</h3>
+      <pre><code>// Show an alert dialog to the user
+window.alert('Hello! This is an alert from the BOM.');
+
+// Redirect browser to another URL
+console.log('Current URL:', window.location.href);
+// window.location.href = 'https://www.example.com';
+</code></pre>
+
+      <h3>DOM Example</h3>
+      <pre><code>// Change the text content of an element
+const heading = document.getElementById('sample-heading');
+heading.textContent = 'This text was changed using the DOM!';
+
+// Create and add a new paragraph element
+const p = document.createElement('p');
+p.textContent = 'New paragraph added dynamically to the page.';
+document.body.appendChild(p);
+</code></pre>
+    </section>
+
+    <section>
+      <h2>Live DOM Example Below</h2>
+      <h3 id="sample-heading">Original Heading</h3>
+    </section>
+
+    <div class="button-group">
+      <button class="action-btn">Change Heading Text</button>
+      <button class="action-btn">Add Paragraph</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Web Dev Tutorials</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.action-btn');
+      
+      // Button 1 - Change Heading Text
+      buttons[0].addEventListener('click', function () {
+        const heading = document.getElementById('sample-heading');
+        heading.textContent = 'This text was changed using the DOM!';
+      });
+
+      // Button 2 - Add Paragraph
+      buttons[1].addEventListener('click', function () {
+        const p = document.createElement('p');
+        p.textContent = 'New paragraph added dynamically to the page.';
+        document.body.appendChild(p);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Learning Page: All HTML Elements</title>
+  <link rel="stylesheet" href="ele.css" />
+</head>
+<body>
+  <header>
+    <h1>HTML Learning Page: All HTML Elements</h1>
+    <p>Welcome to this comprehensive HTML learning page! Below you'll find examples and demonstrations of most common HTML elements with explanations.</p>
+  </header>
+
+  <main>
+    <section class="example">
+      <h2>1. Text Content</h2>
+      <h1>Heading level 1 (h1)</h1>
+      <h2>Heading level 2 (h2)</h2>
+      <h3>Heading level 3 (h3)</h3>
+      <h4>Heading level 4 (h4)</h4>
+      <h5>Heading level 5 (h5)</h5>
+      <h6>Heading level 6 (h6)</h6>
+      <p>This is a paragraph of text. Paragraphs are blocks of text separated by margins.</p>
+      <p>This paragraph contains <strong>strong</strong> (bold), <em>emphasized</em> (italic), <u>underlined</u>, <del>deleted</del>, <ins>inserted</ins>, and <mark>marked</mark> text.</p>
+      <p>Inline code example: <code>&lt;div&gt;Hello&lt;/div&gt;</code></p>
+      <p>This text contains a <small>small</small> tag and a subscript<sub>2</sub> and superscript<sup>2</sup> example.</p>
+      <p>Line break example<br>This is after a line break.</p>
+    </section>
+
+    <section class="example">
+      <h2>2. Links and Images</h2>
+      <p>This is a <a href="https://example.com">link to example.com</a></p>
+      <p><a href="#text-content">Jump to Text Content section</a></p>
+      <figure>
+        <img src="https://via.placeholder.com/150" alt="Sample placeholder image" />
+        <figcaption>Figure 1: Sample placeholder image with figcaption.</figcaption>
+      </figure>
+    </section>
+
+    <section class="example">
+      <h2>3. Lists</h2>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Sub-item 2a</li>
+            <li>Sub-item 2b</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>First ordered item</li>
+        <li>Second ordered item
+          <ol>
+            <li>Sub-item a</li>
+            <li>Sub-item b</li>
+          </ol>
+        </li>
+        <li>Third ordered item</li>
+      </ol>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <section class="example">
+      <h2>4. Tables</h2>
+      <table border="1">
+        <caption>Example Table: Fruits and Prices</caption>
+        <thead>
+          <tr>
+            <th>Fruit</th>
+            <th>Color</th>
+            <th>Price per pound</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Apple</td><td>Red</td><td>$1.20</td></tr>
+          <tr><td>Banana</td><td>Yellow</td><td>$0.50</td></tr>
+          <tr><td>Cherry</td><td>Red</td><td>$3.00</td></tr>
+        </tbody>
+      </table>
+      <p><small>Prices are approximate</small></p>
+    </section>
+
+    <section class="example">
+      <h2>5. Forms</h2>
+      <form>
+        <label>First name:<br><input type="text" placeholder="Enter your first name" /></label><br><br>
+        <label>Email:<br><input type="email" placeholder="example@email.com" /></label><br><br>
+        <label>Password:<br><input type="password" placeholder="Enter password" /></label><br><br>
+        <label>Short bio:<br><textarea placeholder="Tell us about yourself"></textarea></label><br><br>
+        <label>Gender:<br>
+          <select>
+            <option>Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </label><br><br>
+        <fieldset>
+          <legend>Choose your favorite colors:</legend>
+          <label><input type="checkbox" /> Red</label>
+          <label><input type="checkbox" /> Green</label>
+          <label><input type="checkbox" /> Blue</label>
+        </fieldset><br>
+        <fieldset>
+          <legend>Choose your subscription:</legend>
+          <label><input type="radio" name="sub" /> Free</label>
+          <label><input type="radio" name="sub" /> Premium</label>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="example">
+      <h2>6. Semantic Elements</h2>
+      <article>This is an <code>&lt;article&gt;</code> element representing a self-contained composition.</article>
+      <section>This is a <code>&lt;section&gt;</code> element for grouping thematic content.</section>
+      <footer>This is a <code>&lt;footer&gt;</code> element - typically for site or page footers.</footer>
+    </section>
+
+    <section class="example">
+      <h2>7. Media Elements</h2>
+      <audio controls>
+        <source src="example-audio.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio><br><br>
+      <video width="320" height="240" controls>
+        <source src="example-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video><br><br>
+      <figure>
+        <img src="https://via.placeholder.com/200x100" alt="Forest Pathway" />
+        <figcaption>Figure 2: A beautiful forest pathway photo.</figcaption>
+      </figure>
+    </section>
+
+    <section class="example">
+      <h2>8. Other Elements</h2>
+      <div style="background-color: #eee; padding: 10px;">This is a <code>&lt;div&gt;</code> element with background and padding.</div><br>
+      <span style="background-color: yellow;">This is a <code>&lt;span&gt;</code> element with background highlight.</span><br><br>
+      <hr />
+      <p>Line break: <br> here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Web Dev Tutorials</p>
+  </footer>
+</body>
+</html>
